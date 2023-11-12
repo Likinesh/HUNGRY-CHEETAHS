@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ISRO-stat.css">
+</head>
+<body>
+    
+    <!-- <h1>Indian Spacecrafts in order:</h1>
+    <ol>
+    <% for(var i=0; i<data1.spacecrafts.length; i++) { %>
+        <li> <%= data1.spacecrafts[i].name %></li>
+    <% } %>
+    </ol> -->
+    <h1>ISRO centres :</h1>
+    <table>
+        <tr id="table">
+        <th>Name of Centre</th>
+        <th>Place</th>
+        <th>State</th>
+        </tr>
+        <% for(var i=0; i<data2.centres.length; i++) { %>
+                <tr>
+                <td><%= data2.centres[i].name %></td>
+                <td> <%= data2.centres[i].Place %></td>
+                <td> <%= data2.centres[i].State %> </td>
+                </tr>
+            <% } %>
+    </table>
+</body>
+</html>

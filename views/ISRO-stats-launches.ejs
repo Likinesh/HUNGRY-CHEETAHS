@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ISRO-stat.css">
+</head>
+<body>
+    <table>
+        <tr id="table">
+        <!-- <th>Sl.no</th> -->
+        <th>Name</th>
+        <th>Launch Date</th>
+        <th>Launch Type</th>
+        <th>Payload</th>
+        <th>Status</th>
+        </tr>
+            <% for(var i=0; i<data.length; i++) { %>
+                <tr>
+                <!-- <td> <%= data[i].SerialNumber %></td> -->
+                <td> <a href="<%= data[i].Link %>"><%= data[i].Name %></a></td>
+                <td> <%= data[i].LaunchDate %></td>
+                <td> <%= data[i].LaunchType %></td>
+                <td> <%= data[i].Payload %></td>
+                <td> <%= data[i].MissionStatus %></td>
+                </tr>
+            <% } %>
+    </table>
+</body>
+</html>
