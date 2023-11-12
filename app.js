@@ -60,12 +60,31 @@ app.get("/space-news",async(req,res)=>{
   try {
     const response1 = await axios.get(`https://api.spaceflightnewsapi.net/v4/info`);
     const result1 = response1.data;
-    res.render("space-news.ejs",{data1:result1});
+    const response2 = await axios.get(`https://api.spaceflightnewsapi.net/v4/reports`);
+    const result2 = response2.data;
+    res.render("space-news.ejs",{data1:result1 ,data2:result2});
   } catch (error) {
     console.error('Error fetching SpaceFlight API information:', error.message);
     res.status(500).send('Error fetching space news');
   }
 });
+
+app.get("/ISRO-info",async(req,res)=>{
+    res.render("ISRO_API_data.ejs");
+
+})
+
+app.get("/ISRO-customer-satellites",async(req,res)=>{
+  try{
+    const response1 = await axios.get(`https://isro.vercel.app/api/customer_satellites`);
+    const result1 = response1.data;
+    res.render("ISRO-customer-satellites.ejs",{data1:result1});
+  }
+  catch(error){
+    console.error('Error fetching ISRO API information:', error.message);
+    res.status(500).send('Error fetching space news');
+  }
+})
 
 app.get("/ISRO-data",async(req,res)=>{
   try{

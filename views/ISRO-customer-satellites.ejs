@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+    <h1>Customer Satellites Launched are</h1>
+    <table>
+        <tr id="table">
+        <th>Name of Satellite</th>
+        <th>Launch Date</th>
+        <th>Launch by</th>
+        <th>Mass</th>
+        <th>Launcher</th>
+        </tr>
+            <% for(var i=0; i<data1.customer_satellites.length; i++) { %>
+                <tr>
+                <td><%= data1.customer_satellites[i].id %></td>
+                <td> <%= data1.customer_satellites[i].launch_date %></td>
+                <td> <%= data1.customer_satellites[i].country %></td>
+                <td> <%= data1.customer_satellites[i].mass %> kg</td>
+                <td> <%= data1.customer_satellites[i].launcher %></td>
+                </tr>
+            <% } %>
+    </table>
+</body>
+</html>
