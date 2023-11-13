@@ -3,26 +3,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space WEB</title>
+    <link rel="stylesheet" href="css/public.css">
     
 </head>
 <body>
-   
-    <h1>ISS Information</h1>
-    
-    <h2>Latitude: <%= place.results[0].annotations.DMS.lat %></h2>
-    <h2>Longitude: <%= place.results[0].annotations.DMS.lng %></h2>
-    <h2>Current Velocity: <%=data.velocity%></h2>
-    <h2>Current Location: <%= place.results[0].formatted %></h2>
-    <h2>Current TimeZone: <%=area.timezone_id%> </h2>
-    <h2>Members in ISS are</h2>
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <video autoplay loop muted speed="0.5" plays-inline class="background-clip">
+        <source src="video/bckgd1.mp4" type="video/mp4">
+    </video>
+ <i>
+   <div class="navbar">
+    <div class="links">
+        <a href="home" id="home">Home</a>
+            <a href="about" id="about">About</a>
+            <a href="services" id="service">Services</a>
+            <a href="contact" id=contact>Contact</a>
+    </div>
+   </div>
+   <br>
+   <br>
+
+   <div id="total">
+    <div><h1>ISS Information</h1></div>
+    <div id="location">
+    <ul>
+    <li>Latitude: <%= place.results[0].annotations.DMS.lat %></li>
+    <li>Longitude: <%= place.results[0].annotations.DMS.lng %></li>
+    <li>Current Velocity: <%=data.velocity%>Kmph</li>
+    <li>Current Location: <%= place.results[0].formatted %></li>
+    <li>Current TimeZone: <%=area.timezone_id%> </li>
+    </ul>
+</div>
+<br>
+<br>
+<div>
+   <b> <h1 >Members in ISS are</hi></b>
+</div>
+    <br>
+
+    <div id="members">
     <ol>
     <% for (var i=0;i<members.number;i++){  %>
-           <h3> <li> <%= members.people[i].name %>  </li> </h3>
+           <i> <li> <%= members.people[i].name %>  </li> </i>
     <% }  %>
     </ol>
-    <div style="padding:10px">
-        <div id="map"></div>
-    </div>
+</div>
+</div>
     <!-- <iframe src=" <%= area.map_url %>" width="600" height="450" style="border:0;" allowfullscreen=""  ></iframe> -->
 </body>
 </html>

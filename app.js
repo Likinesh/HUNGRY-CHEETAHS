@@ -108,6 +108,10 @@ app.get("/ISRO-stats-sc",async(req,res)=>{
   }
 })
 
+app.get("/contact",async(req,res)=>{
+  res.render("contact-us.ejs")
+})
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
