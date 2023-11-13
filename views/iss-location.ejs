@@ -8,18 +8,21 @@
 <body>
    
     <h1>ISS Information</h1>
-    <!-- <h2>ID: <%= data.id%> </h2> -->
-    <!-- <h2>Name: <%=data.name%></h2> -->
-    <h2>Latitude: <%= data.latitude%></h2>
-    <h2>Longitude: <%= data.longitude%></h2>
+    
+    <h2>Latitude: <%= place.results[0].annotations.DMS.lat %></h2>
+    <h2>Longitude: <%= place.results[0].annotations.DMS.lng %></h2>
     <h2>Current Velocity: <%=data.velocity%></h2>
-    <h2>Current Location: <%=area.timezone_id%> </h2>
+    <h2>Current Location: <%= place.results[0].formatted %></h2>
+    <h2>Current TimeZone: <%=area.timezone_id%> </h2>
     <h2>Members in ISS are</h2>
     <ol>
     <% for (var i=0;i<members.number;i++){  %>
            <h3> <li> <%= members.people[i].name %>  </li> </h3>
     <% }  %>
     </ol>
+    <div style="padding:10px">
+        <div id="map"></div>
+    </div>
     <!-- <iframe src=" <%= area.map_url %>" width="600" height="450" style="border:0;" allowfullscreen=""  ></iframe> -->
 </body>
 </html>
