@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mars Weather:</h1>
+    <p>Terrestrial Date: <%= data.terrestrial_date %></p>
+    <p>Temperature: </p>
+    <ul>
+        <li>Max: <%= data.max_temp %><%= data.untiOfMeasure %></li>
+        <li>Min: <%= data.min_temp %><%= data.untiOfMeasure %></li>
+    </ul>
+    <p>Pressure: <%= data.pressure %></p>
+    <p>Sunrise :<%= data.sunrise %></p>
+    <p>Sunset :<%= data.sunset %></p>
+    
+</body>
+</html>

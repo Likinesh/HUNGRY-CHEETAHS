@@ -120,6 +120,16 @@ app.get("/next-launch",async(req,res)=>{
   }
 })
 
+app.get("/mars-weather",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.maas2.apollorion.com");
+    const result = response.data;
+    res.render("mars-temp.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
 app.get("/spacex-starlink",async(req,res)=>{
   try {
     const response = await axios.request("https://api.spacexdata.com/v4/starlink");
@@ -155,6 +165,36 @@ app.get("/spacex-crew",async(req,res)=>{
     const response = await axios.request("https://api.spacexdata.com/v4/crew");
     const result = response.data;
     res.render("spacex-crew.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-landpads",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/landpads");
+    const result = response.data;
+    res.render("spacex-landpads.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-rockets",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/rockets");
+    const result = response.data;
+    res.render("spacex-rockets.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-launchpads",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/launchpads");
+    const result = response.data;
+    res.render("spacex-launchpads.ejs",{data:result})
   } catch (error) {
     console.error(error);
   }

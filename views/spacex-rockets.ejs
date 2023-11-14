@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SpaceX rockets are:</h1>
+    <% for( let i = 0; i < data.length; i++ ) { %>
+        <h3>Name: <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a></h3>
+        <img src="<%= data[i].flickr_images %>" height="400px" width="500px">
+        <p>Type: <%= data[i].type %></p>
+        <p>Launched on: <%= data[i].first_flight %></p>
+        <p>Number of Stages: <%= data[i].stage %></p>
+        <p>Company: <%= data[i].company %></p>
+        <p>Launched from: <%= data[i].country %></p>
+        <p>Height: <%= data[i].height.meters %>m</p>
+        <p>Mass: <%= data[i].mass.kg %>kg</p>
+        <p>Description: <%= data[i].description %></p>
+
+    <% } %>
+</body>
+</html>

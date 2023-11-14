@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SpaceX Landpads are: </h1>
+    <% for( let i = 0; i < data.length; i++ ) { %>
+        <h3>Name: <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a></h3>
+        <img src="<%= data[i].images.large[0] %>" alt="Image not found" height="400px" width="500px">
+        <p>Full name: <%= data[i].full_name %></p>
+        <p>Status: <%= data[i].status %></p>
+        <p>Type: <%= data[i].type %></p>
+        <p>Region: <%= data[i].locality %>,<%= data[i].region %></p>
+        <p>Details: <%= data[i].details %></p>
+    <% } %>
+</body>
+</html>
