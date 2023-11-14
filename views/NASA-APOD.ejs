@@ -6,9 +6,20 @@
     <link rel="stylesheet" href="css/public2.css">nk
 </head>
 <body>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <i>
+    <div class="navbar">
+        <div class="links" >
+            <a href="home" id="home">Home</a>
+            <a href="about" id="about">About</a>
+            <a href="services" id="service">Services</a>
+            <a href="contact" id=contact>Contact</a>
+        </div>
+    </div>
     <h1 id="topic">Today's Topic: <%= data.title %></h1>
     <p>Date: <%= data.date %></p>
     <img src= "<%= data.url %> " alt="<%= data.title %>" height="500" width="700" id="img">
     <p id="topic"> Explanation: <%= data.explanation %></p>
+</i>
 </body>
 </html>
