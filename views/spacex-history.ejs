@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spacex History</h1>
+    <% for( let i = data.length-1; i>=0; i-- ) { %>
+        <h3>Title: <a href="<%= data[i].links.article %>"><%= data[i].title %></a></h3>
+        <p>Event Date: <%= data[i].event_date_utc  %></p>
+        <p>Details: <%= data[i].details  %></p>
+    <% } %>
+</body>
+</html>

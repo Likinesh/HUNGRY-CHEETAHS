@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SpaceX crew members are: </h1>
+    <% for( let i = 0; i < data.length; i++ ) { %>
+        <img src="<%= data[i].image %>" alt="Image not found" height="400px" width="500px">
+        <h3>Name: <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a></h3>
+        <p>Agency: <%= data[i].agency %></p>
+    <% } %>
+</body>
+</html>

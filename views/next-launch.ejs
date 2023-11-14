@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Upcoming 5 SpaceCraft Launches are:</h1>
+    <% for( let i = 0; i < data.result.length; i++ ) { %>
+        <h3>Mission Name: <%= data.result[i].name %></h3>
+        <p>Launching Date: <%= data.result[i].date_str %>,<%= data.result[i].est_date.year %></p>
+        <p>Launching by: <%= data.result[i].provider.name %></p>
+        <p>Launch Vehicle: <%= data.result[i].vehicle.name %></p>
+        <p>Launch Pad: <%= data.result[i].pad.name %></p>
+        <p>Location: <%= data.result[i].pad.location.name %>,<%= data.result[i].pad.location.country %></p>
+        <p>Description: <%= data.result[i].launch_description %></p>
+    <% } %>
+</body>
+</html>

@@ -7,6 +7,8 @@ const port = 3000;
 
 app.use(express.static("public"));
 
+const url='https://api.spaceflightnewsapi.net/v4/articles';
+
 app.get("/",function(req,res){
   res.render("index.ejs");
 })
@@ -105,6 +107,56 @@ app.get("/ISRO-stats-sc",async(req,res)=>{
   catch(error){
     console.error('Error fetching ISRO API information:', error.message);
     res.status(500).send('Error fetching space news');
+  }
+})
+
+app.get("/next-launch",async(req,res)=>{
+  try {
+    const response = await axios.request("https://fdo.rocketlaunch.live/json/launches/next/5");
+    const result = response.data;
+    res.render("next-launch.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-starlink",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/starlink");
+    const result = response.data;
+    res.render("spacex-starlink.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-history",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/history");
+    const result = response.data;
+    res.render("spacex-history.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-ships",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/ships");
+    const result = response.data;
+    res.render("spacex-ships.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-crew",async(req,res)=>{
+  try {
+    const response = await axios.request("https://api.spacexdata.com/v4/crew");
+    const result = response.data;
+    res.render("spacex-crew.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
   }
 })
 

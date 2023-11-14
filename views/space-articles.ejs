@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for(var i=0; i<data.results.length; i++) { %>
+        <h1><a href="<%= data.results[i].url %> ">Title: <%=data.results[i].title %></a></h1>
+        <img src="<%= data.results[i].image_url %>" alt="Image not available" height="500" width="700">
+        <p>Summary: <%= data.results[i].summary %></p>
+        <p>Fetched from: <%= data.results[i].news_site %></p>
+        <p>Published on: <%= data.results[i].published_at %></p>
+    <% } %>
+    <% const use =data.next.slice(47) %>
+    <form action="/api/<%=use%>" method="post">
+        <input type="submit" value="buttonn">
+    </form>
+
+</body>
+</html>

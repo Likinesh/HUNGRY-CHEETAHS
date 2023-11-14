@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ships in SpaceX</h1>
+    <% for( let i = 0; i < data.length; i++ ) { %>
+        <h3>Name: <a href="<%= data[i].link %>"><%= data[i].name %></a></h3>
+        <% if ( data[i].image !== null) { %>
+            <img src="<%= data[i].image %>" height="300px" width="500px">
+        <% } %>
+        <p>Built in: <%= data[i].year_built %></p>
+        <p>Type: <%= data[i].type %></p>
+        <p>Home port: <%= data[i].home_port %></p>
+        <p>Mass: <%= data[i].mass_kg %> kg</p>
+        <p>Roles:</p>
+        <% for( let j = 0; j < data[i].roles.length; j++ ) { %>
+            <p> <%= data[i].roles[j] %> </p>
+        <% } %>
+    <% } %>
+</body>
+</html>
