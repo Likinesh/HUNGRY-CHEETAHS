@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Planet Details:</h1>
+    <form action="/solar-system" method="post">
+        <input type="text" name="planet" id="" placeholder="Planet name">
+        <button type="submit">Send Request</button>
+    </form>
+    <% if (locals.solar!==null) { %>
+            <h1>Details :</h1>
+            <h3>Name of Planet:<%=solar[0].name%></h3>
+            <p>Mass :<%= solar[0].mass %>*1.898*10^27 kg</p>
+            <p>Radius :<%=radi%>kms</p>
+            <p>Timeperiod to revolve :<%=solar[0].period%></p>
+            <p>Temperature :<%=solar[0].temperature%>K</p>
+    <% } %>
+        <br>
+<% if (locals.data) { %>
+    <h1>In our Solar System:</h1>
+    <% for( let i = 0; i < data.knowncount.length; i++ ) { %>
+        <p>Number of <%= data.knowncount[i].id%> is <%= data.knowncount[i].knownCount %></p>
+    <% } }%>
+</body>
+</html>

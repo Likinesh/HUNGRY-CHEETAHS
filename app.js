@@ -1,15 +1,18 @@
 const express = require('express');
 const axios = require('axios');
 const http = require('http');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
+app.set("view engine","ejs");
+app.use(bodyParser.urlencoded({extended: true}))
 
 const url='https://api.spaceflightnewsapi.net/v4/articles';
 
-app.get("/",function(req,res){
+app.get("/",(req,res)=>{
   res.render("index.ejs");
 })
 
@@ -56,7 +59,7 @@ app.get("/space-news",async(req,res)=>{
   }
 });
 
-app.get("/ISRO-info",async(req,res)=>{
+app.get("/ISRO-info",(req,res)=>{
     res.render("ISRO_API_data.ejs");
 })
 
@@ -125,6 +128,14 @@ app.get("/mars-weather",async(req,res)=>{
     const response = await axios.request("https://api.maas2.apollorion.com");
     const result = response.data;
     res.render("mars-temp.ejs",{data:result})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.get("/spacex-info",(req,res)=>{
+  try {
+    res.render("spacex_API_data.ejs");
   } catch (error) {
     console.error(error);
   }
@@ -200,7 +211,43 @@ app.get("/spacex-launchpads",async(req,res)=>{
   }
 })
 
-app.get("/contact",async(req,res)=>{
+let planet_name=null;
+app.get("/solar-system",async(req,res)=>{
+  if (planet_name===null) {
+    const response1 = await axios.request("https://api.le-systeme-solaire.net/rest/knowncount");
+    const result1 = response1.data;
+    res.render("solar-system.ejs",{data:result1,solar:null});
+  }
+  try {
+    const options = {
+      method: 'GET',
+      url: 'https://api.api-ninjas.com/v1/planets?name='+planet_name,
+      headers: {
+         'X-Api-Key': 'tRtAPplmWukhtiPoolga5Q==5p7NOagUHP5IloQa'
+      },
+    };
+    const response1 = await axios.request("https://api.le-systeme-solaire.net/rest/knowncount");
+    const result1 = response1.data;
+    const response2 = await axios.request(options);
+    const result2 = response2.data;
+    let rad=(result2[0].radius)*69911;
+    res.render("solar-system.ejs",{data:result1 , solar:result2, radi:rad})
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.post("/solar-system",(req,res)=>{
+    planet_name=req.body.planet;
+    res.redirect('/solar-system');
+    
+})
+
+app.get("/about",(req,res)=>{
+  res.render("about.ejs");
+})
+
+app.get("/contact",(req,res)=>{
   res.render("contact-us.ejs")
 })
 

@@ -1,0 +1,57 @@
+#hero{
+    position:relative;
+}
+.nav-link{
+    color: white;
+}.navbar-brand{
+    color: white;
+}
+.home-section-bg{
+    background: url('w1.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+.about-us-section-bg{
+    background-color: white;
+    height: 100vh;
+}
+.background-clip{
+    height: 100vh;
+    
+    width:100vw;
+}
+.home-section-bg-heading{
+ color: white;
+font-size: 50px;
+margin-top:500px;
+}
+.h2{
+    color: black;
+}
+.h5{
+    color:wheat;
+}
+.content{
+    text-align:center;
+}
+.content h1{
+    font: size 95px;
+    color: #fff;
+    margin-bottom: 50px;
+    
+}
+
+.content a{
+    font-size:23px;
+    color:#fff;
+    text-decoration: none;
+    border:2px solid #fff;
+    padding:15px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+.content a:hover{
+    background-color:#fff;
+    color:#000;
+    
+}
