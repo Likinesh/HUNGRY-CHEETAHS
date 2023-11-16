@@ -211,6 +211,33 @@ app.get("/spacex-launchpads",async(req,res)=>{
   }
 })
 
+let e_date='';
+app.get("/mars-rover",async(req,res)=>{
+  try {
+    if (e_date==='') {
+      const response = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=DEMO_KEY&sol=4000");
+      const result = response.data;
+      res.render("mars-rover-img.ejs",{data:result});  
+    }
+    else{
+      const response = await axios.get("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?api_key=DEMO_KEY&earth_date="+e_date);
+      const result = response.data;
+      res.render("mars-rover-img.ejs",{data:result});
+    }
+  } catch (error) {
+    console.error(error);
+  }
+})
+
+app.post("/mars-rover",(req,res)=>{
+    e_date=req.body.edate;
+    res.redirect("/mars-rover");
+});
+
+app.get("/quiz",(req,res)=>{
+  res.render("quiz.ejs");
+})
+
 let planet_name=null;
 app.get("/solar-system",async(req,res)=>{
   if (planet_name===null) {

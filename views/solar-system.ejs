@@ -12,10 +12,10 @@
     </form>
     <% if (locals.solar!==null) { %>
             <h1>Details :</h1>
-            <h3>Name of Planet:<%=solar[0].name%></h3>
+            <h3>Name of Planet: <%=solar[0].name%></h3>
             <p>Mass :<%= solar[0].mass %>*1.898*10^27 kg</p>
             <p>Radius :<%=radi%>kms</p>
-            <p>Timeperiod to revolve :<%=solar[0].period%></p>
+            <p>Timeperiod to revolve :<%=solar[0].period%>days</p>
             <p>Temperature :<%=solar[0].temperature%>K</p>
     <% } %>
         <br>

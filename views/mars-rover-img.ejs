@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mars.css">
+</head>
+<body>
+    <h1>Mars Rover Photos Obtained from NASA:</h1>
+    <h3>Rover Details:</h3>
+    <p>Name: <a href="https://mars.nasa.gov/msl/home/"><%= data.photos[0].rover.name %></a></p>
+    <p>Launched on: <%= data.photos[0].rover.launch_date %></p>
+    <p>Landed on: <%= data.photos[0].rover.landing_date %></p>
+    <p>Total Photos Captured: <%= data.photos[0].rover.total_photos %></p>
+    <h2>Photos are:</h2>
+    <form action="/mars-rover" method="post">
+        <input type="text" name="edate" id="" placeholder="YYYY-MM-DD" >
+        <input type="submit" value="Search" >
+    </form>
+    <p>Captured on: <%= data.photos[0].earth_date %></p>
+    <ul>
+        <div class="grid-container">
+    <% for( let i = 0; i < data.photos.length; i++ ) { %>
+            <img src="<%= data.photos[i].img_src %>" height="300px" width="400px" class="grid-item">
+            <p>Captured by: <%= data.photos[i].camera.full_name %></p>
+   <% } %></ul></div>
+</body>
+</html>
