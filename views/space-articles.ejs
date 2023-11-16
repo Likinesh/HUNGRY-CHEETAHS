@@ -12,9 +12,13 @@
         <p>Fetched from: <%= data.results[i].news_site %></p>
         <p>Published on: <%= data.results[i].published_at %></p>
     <% } %>
-    <% const use =data.next.slice(47) %>
-    <form action="/api/<%=use%>" method="post">
-        <input type="submit" value="buttonn">
+    <% if (data.previous!==null) { %>
+        <form action="/space-articles-prev" method="post">
+            <input type="submit" value="Prev">
+        </form>
+    <% } %>
+    <form action="/space-articles-next" method="post">
+        <input type="submit" value="Next">
     </form>
 
 </body>

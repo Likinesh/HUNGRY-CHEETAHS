@@ -10,8 +10,6 @@ app.use(express.static("public"));
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}))
 
-const url='https://api.spaceflightnewsapi.net/v4/articles';
-
 app.get("/",(req,res)=>{
   res.render("index.ejs");
 })
@@ -229,7 +227,7 @@ app.get("/mars-rover",async(req,res)=>{
   }
 })
 
-app.post("/mars-rover",(req,res)=>{
+app.post("/mars-rover-date",(req,res)=>{
     e_date=req.body.edate;
     res.redirect("/mars-rover");
 });
@@ -262,6 +260,28 @@ app.get("/solar-system",async(req,res)=>{
   } catch (error) {
     console.error(error);
   }
+});
+
+let url = "https://api.spaceflightnewsapi.net/v4/articles";
+app.get("/space-articles",async(req,res)=>{
+  const response = await axios.request(url);
+  const result =response.data;
+  res.render("space-articles.ejs",{data:result});
+});
+
+app.post("/space-articles-prev",async(req,res)=>{
+  const response = await axios.request(url);
+  const result = response.data;
+  url=result.previous;
+  res.redirect("/space-articles");
+  
+});
+
+app.post("/space-articles-next",async(req,res)=>{
+  const response = await axios.request(url);
+  const result = response.data;
+  url= result.next;
+  res.redirect("/space-articles");
 })
 
 app.post("/solar-system",(req,res)=>{
