@@ -3,12 +3,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/spacex.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="links">
+            <a href="home" id="home">Home</a>
+                <a href="about" id="about">About</a>
+                <a href="services" id="service">Services</a>
+                <a href="contact" id=contact>Contact</a>
+        </div>
+       </div>
     <h1>SpaceX rockets are:</h1>
     <% for( let i = 0; i < data.length; i++ ) { %>
-        <h3>Name: <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a></h3>
-        <img src="<%= data[i].flickr_images %>" height="400px" width="500px">
+        <div id="border">
+ <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a>
+        <div id="img"><img src="<%= data[i].flickr_images %>" height="400px" width="500px"></div> 
         <p>Type: <%= data[i].type %></p>
         <p>Launched on: <%= data[i].first_flight %></p>
         <p>Number of Stages: <%= data[i].stage %></p>
@@ -17,6 +27,7 @@
         <p>Height: <%= data[i].height.meters %>m</p>
         <p>Mass: <%= data[i].mass.kg %>kg</p>
         <p>Description: <%= data[i].description %></p>
+    </div>
 
     <% } %>
 </body>
