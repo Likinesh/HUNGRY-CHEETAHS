@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="contain_moon" style="text-align:center;padding-top:7px;padding-bottom:7px;font-size:23px">
+    <div style="font-weight:bold">The moon today</div>
+    <div style="margin-top:-9px;margin-bottom:-19px;padding:39px;filter:drop-shadow(0 0 39px hsl(191,100%,29%))">
+    </div>
+    <div>.</div>
+    <div style="font-size:small">.</div>
+    </div>
+    <script>
+    (function(){
+        var d=new Date().getDate();
+        var m=document.querySelectorAll("#contain_moon div");
+        var a=new XMLHttpRequest();
+        var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=130&lightColor=rgb(252,254,216)&shadeColor=rgb(1,19,33)&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";
+        m[1].style.height="130px";
+        a.onreadystatechange=function(){
+            if(a.readyState==4&&a.status==200){
+                var b=JSON.parse(a.responseText);
+                m[1].innerHTML=b.phase[d].svg;
+                if(typeof moon_widget_loaded=="function")moon_widget_loaded(b);
+                m[2].innerHTML=b.phase[d].npWidget;
+                m[3].innerHTML="Next full moon<br>"+b.nextFullMoon}};
+                a.open("GET",url,true);
+                a.send()})()
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

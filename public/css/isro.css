@@ -3,27 +3,25 @@
     margin:0;
     box-sizing:border-box;
     font-family:'Poppins';
-    color: #fff;    
+    color: #fff;   
 }
 h1,h2{
     margin-left: 2%;
     justify-content: space-around;
     padding: 1.5%;
-    background: linear-gradient(to right, rgba(238, 230, 230, 0.651), rgba(255,0,0,1));
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 h2>a{
     
     text-decoration: none;
     color:#fff;
-    font: size 5rem;;
+    font: size 5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 h2>a:hover{
-    background: linear-gradient(to right, #f32170, 
-                    #ff6b08, #cf23cf, #eedd44); 
-            -webkit-text-fill-color: transparent; 
-            -webkit-background-clip: text;
+    color: aquamarine;
 }
 .background-clip{
     right:0;

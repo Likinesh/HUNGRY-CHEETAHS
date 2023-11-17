@@ -5,21 +5,27 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Some Space Articles are: </h1>
+    <ul>
     <% for(var i=0; i<data.results.length; i++) { %>
-        <h1><a href="<%= data.results[i].url %> ">Title: <%=data.results[i].title %></a></h1>
-        <img src="<%= data.results[i].image_url %>" alt="Image not available" height="500" width="700">
+        <h3><a href="<%= data.results[i].url %> ">Title: <%=data.results[i].title %></a></h3>
+        <% if (data.results[i].image_url !==null) { %>
+            <img src="<%= data.results[i].image_url %>" alt="Image not available" height="300px" width="500px">
+        <% } %>
         <p>Summary: <%= data.results[i].summary %></p>
         <p>Fetched from: <%= data.results[i].news_site %></p>
         <p>Published on: <%= data.results[i].published_at %></p>
     <% } %>
+    </ul>
     <% if (data.previous!==null) { %>
         <form action="/space-articles-prev" method="post">
             <input type="submit" value="Prev">
         </form>
     <% } %>
-    <form action="/space-articles-next" method="post">
-        <input type="submit" value="Next">
-    </form>
-
+    <% if (data.next!==null) { %>
+        <form action="/space-articles-next" method="post">
+            <input type="submit" value="Next">
+        </form>
+    <% } %>
 </body>
 </html>

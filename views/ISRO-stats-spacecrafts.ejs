@@ -6,9 +6,18 @@
     <link rel="stylesheet" href="css/table.css">
 </head>
 <body>
-    <h1>SpaceCrafts Launched by ISRO:</h1>
-    <table>
-        <tr id="table">
+    <body style="background-image:url('pictures/bckgd.jpg');">
+        <div class="navbar">
+          <div class="links" >
+              <a href="home" id="home">Home</a>
+              <a href="about" id="about">About</a>
+              <a href="services" id="service">Services</a>
+              <a href="contact" id=contact>Contact</a>
+          </div>
+      </div>
+    <h1 style="color: wheat;">SpaceCrafts Launched by ISRO:</h1>
+    <table style="background-image:url('pictures/table4.jpeg');">
+        <tr id="table" style="background-color: aqua;">
         <!-- <th>Sl.no</th> -->
         <th>Name</th>
         <th>Launch Date</th>
@@ -21,11 +30,11 @@
                 <tr>
                 <!-- <td> <%= data[i].serialNumber %></td> -->
                 <td> <a href="<%= data[i].link %>"><%= data[i].name %></a></td>
-                <td> <%= data[i].launchDate %></td>
-                <td> <%= data[i].launchVehicle %></td>
-                <td> <%= data[i].orbitType %></td>
-                <td> <%= data[i].application %></td>
-                <td> <%= data[i].missionStatus %></td>
+                <td style="color:black;"> <%= data[i].launchDate %></td>
+                <td style="color:black;"> <%= data[i].launchVehicle %></td>
+                <td style="color:black;"> <%= data[i].orbitType %></td>
+                <td style="color:black;"> <%= data[i].application %></td>
+                <td style="color:black;"> <%= data[i].missionStatus %></td>
                 </tr>
             <% } %>
     </table>
