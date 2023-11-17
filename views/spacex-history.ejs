@@ -3,13 +3,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/spacex.css">
 </head>
 <body>
-    <h1>Spacex History</h1>
+    <i>
+        <div class="navbar">
+         <div class="links">
+             <a href="home" id="home">Home</a>
+                 <a href="about" id="about">About</a>
+                 <a href="services" id="service">Services</a>
+                 <a href="contact" id=contact>Contact</a>
+         </div>
+        </div>
+     <div id="heading"><h1>Spacex History</h1></div>
     <% for( let i = data.length-1; i>=0; i-- ) { %>
-        <h3>Title: <a href="<%= data[i].links.article %>"><%= data[i].title %></a></h3>
-        <p>Event Date: <%= data[i].event_date_utc  %></p>
-        <p>Details: <%= data[i].details  %></p>
+        <div id="border">
+        <h3><a id="title">Title: </a><a href="<%= data[i].links.article %>"><%= data[i].title %></a></h3>
+        <p> <a id="event">Event Date: </a><%= data[i].event_date_utc  %></p>
+        <p> <a id="details">Details: </a><%= data[i].details  %></p>
+    </div>
     <% } %>
 </body>
 </html>
