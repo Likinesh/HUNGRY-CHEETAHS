@@ -305,6 +305,31 @@ app.get("/contact",(req,res)=>{
   res.render("contact-us")
 })
 
+app.post('/sendmail',async(req,res)=>{
+  let name =req.body.name;
+  let mail =req.body.mail;
+  let doubt = req.body.query;
+
+  let testaccount = await nodemailer.createTestAccount();
+
+  let transporter = await nodemailer.createTransport({
+    host: "sandbox.smtp.mailtrap.io",
+    port: 2525,
+    auth: {
+      user: "8be94564c6efe9",
+      pass: "134001e0c60db6"
+    },
+  })
+  let info =transporter.sendMail({
+      from: name + " " + mail,    
+      to: "likithkskommareddy@gmail.com", // list of receivers    
+      subject: "Query regarding Space Explorer", // Subject line    
+      text: doubt
+  })
+  console.log((await info).messageId)
+  res.redirect("/contact")
+})
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });

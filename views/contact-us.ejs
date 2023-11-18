@@ -20,19 +20,19 @@
                 <div class="col-sm-12 col-lg-6">
                     <div class="right">
                         <i class="fa fa-caret-left"></i>
-                        <form>
+                        <form action="/sendmail" method="post">
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Your Name</label>
-                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">Email Address</label>
-                              <input type="email" class="form-control" id="exampleInputPassword1">
+                              <input type="email" name="mail" class="form-control" id="exampleInputPassword1">
                               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> 
+                                <textarea name="query" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea> 
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                           </form>
