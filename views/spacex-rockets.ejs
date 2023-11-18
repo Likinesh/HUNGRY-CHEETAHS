@@ -17,7 +17,7 @@
     <h1>SpaceX rockets are:</h1>
     <% for( let i = 0; i < data.length; i++ ) { %>
         <div id="border">
- <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a>
+ <a id="main" href="<%= data[i].wikipedia %>"><%= data[i].name %></a>
         <div id="img"><img src="<%= data[i].flickr_images %>" height="400px" width="500px"></div> 
         <p>Type: <%= data[i].type %></p>
         <p>Launched on: <%= data[i].first_flight %></p>
