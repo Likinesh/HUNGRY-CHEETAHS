@@ -18,7 +18,7 @@
     <h1>SpaceX Launchpads:</h1>
     <% for( let i = 0; i < data.length; i++ ) { %>
         <div id="border">
-        <a> <%= data[i].name %></a> 
+        <a id="main"> <%= data[i].name %></a> 
         <div id="img"><img src="<%= data[i].images.large %>" height="400px" width="500px"></div>
         <p>Full name: <%= data[i].full_name %></p>
         <p>Locations: <%= data[i].locality %>,<%= data[i].region %></p>
