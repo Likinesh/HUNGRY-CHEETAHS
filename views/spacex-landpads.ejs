@@ -18,7 +18,7 @@
     <h1>SpaceX Landpads are: </h1>
     <% for( let i = 0; i < data.length; i++ ) { %>
         <div id="border">
-        <a href="<%= data[i].wikipedia %>"><%= data[i].name %></a> 
+        <a id="main" href="<%= data[i].wikipedia %>"><%= data[i].name %></a> 
         <div id="img"><img src="<%= data[i].images.large[0] %>" alt="Image not found" height="400px" width="500px"></div>
         <p>Full name: <%= data[i].full_name %></p>
         <p>Status: <%= data[i].status %></p>
