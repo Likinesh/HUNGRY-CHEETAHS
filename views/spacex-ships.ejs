@@ -2,14 +2,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spacex-Ships</title>
+    <link rel="stylesheet" href="css/spacex.css">
 </head>
-<body>
+<body> 
+     <div class="navbar">
+    <div class="links">
+        <a href="home" id="home">Home</a>
+            <a href="about" id="about">About</a>
+            <a href="services" id="service">Services</a>
+            <a href="contact" id=contact>Contact</a>
+    </div>
+   </div>
     <h1>Ships in SpaceX</h1>
+
     <% for( let i = 0; i < data.length; i++ ) { %>
-        <h3>Name: <a href="<%= data[i].link %>"><%= data[i].name %></a></h3>
+        <div id="border">
+         <a id="shipname"  href="<%= data[i].link %>"><%= data[i].name %></a>
         <% if ( data[i].image !== null) { %>
-            <img src="<%= data[i].image %>" height="300px" width="500px">
+            <img id="img" src="<%= data[i].image %>" height="300px" width="500px">
         <% } %>
         <p>Built in: <%= data[i].year_built %></p>
         <p>Type: <%= data[i].type %></p>
@@ -18,7 +29,8 @@
         <p>Roles:</p>
         <% for( let j = 0; j < data[i].roles.length; j++ ) { %>
             <p> <%= data[i].roles[j] %> </p>
-        <% } %>
+        
+        <% } %></div>
     <% } %>
 </body>
 </html>
