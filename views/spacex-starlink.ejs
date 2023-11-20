@@ -16,7 +16,7 @@
        </div>
     <h1>StarLinks launched till date:</h1>
     <div class="grid-container">
-    <% for( let i = data.length-1; i>=0; i-- ) { %>
+    <% for( let i = num-1; i>=num-300; i-- ) { %>
         <div id="border">
         <h3>Name: <%= data[i].spaceTrack.OBJECT_NAME %></h3>
         <p>Launched on: <%= data[i].spaceTrack.LAUNCH_DATE %></p>
@@ -32,6 +32,15 @@
 
     <% } %>
 </div>
-
+<% if (num!=3526) { %>
+    <form action="/starlink-prev" method="post">
+        <button type="submit">Previous</button>
+    </form>
+<% } %>
+<% if (num!=300) { %>
+    <form action="/starlink-next" method="post">
+        <button type="submit">Next</button>
+    </form>
+<% } %>
 </body>
 </html>

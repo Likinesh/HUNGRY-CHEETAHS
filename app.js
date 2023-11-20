@@ -142,15 +142,36 @@ app.get("/spacex-info",(req,res)=>{
   }
 })
 
+let i=3526;
 app.get("/spacex-starlink",async(req,res)=>{
   try {
     const response = await axios.request("https://api.spacexdata.com/v4/starlink");
     const result = response.data;
-    res.render("spacex-starlink",{data:result})
+    res.render("spacex-starlink",{data:result,num:i})
   } catch (error) {
     console.error(error);
   }
 })
+
+app.post('/starlink-next', async(req, res) => {
+  if (i-301>=0) {
+    i-=301;
+  }
+  else{
+    i=300;
+  }
+   res.redirect('/spacex-starlink');
+});
+
+app.post('/starlink-prev', async(req, res) => {
+  if (i+301<3526) {
+    i+=301;
+  }
+  else{
+    i=3526;
+  }
+   res.redirect('/spacex-starlink');
+});
 
 app.get("/spacex-history",async(req,res)=>{
   try {
@@ -322,8 +343,8 @@ app.post('/sendmail',async(req,res)=>{
   })
   let info =transporter.sendMail({
       from: name + " " + mail,    
-      to: "likithkskommareddy@gmail.com", // list of receivers    
-      subject: "Query regarding Space Explorer", // Subject line    
+      to: "likithkskommareddy@gmail.com",  
+      subject: "Query regarding Space Explorer",    
       text: doubt
   })
   console.log((await info).messageId)
