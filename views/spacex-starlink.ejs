@@ -2,20 +2,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spacex-Starlink</title>
+    <link rel="stylesheet" href="css/spacex.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="links">
+            <a href="home" id="home">Home</a>
+                <a href="about" id="about">About</a>
+                <a href="services" id="service">Services</a>
+                <a href="contact" id=contact>Contact</a>
+        </div>
+       </div>
     <h1>StarLinks launched till date:</h1>
+    <div class="grid-container">
     <% for( let i = data.length-1; i>=0; i-- ) { %>
+        <div id="border">
         <h3>Name: <%= data[i].spaceTrack.OBJECT_NAME %></h3>
         <p>Launched on: <%= data[i].spaceTrack.LAUNCH_DATE %></p>
         <p>Launched by: <%= data[i].spaceTrack.COUNTRY_CODE %></p>
        <% if ( data[i].spaceTrack.DECAY_DATE !== null) { %>
-        <p>Decayed on: <%= data[i].spaceTrack.DECAY_DATE %></p>
+        <p> Decayed on: <%= data[i].spaceTrack.DECAY_DATE %>
        <% } %>
-        <p>Velocity: <%= data[i].velocity_kms %>kmph</p>
+       <% if ( data[i].spaceTrack.DECAY_DATE === null) { %>
+        <p> Velocity: <%= data[i].velocity_kms %>kmph
+       <% } %></p>
         <p>Location: <%= data[i].latitude %>,<%= data[0].longitude %></p>
+    </div>
+
     <% } %>
+</div>
 
 </body>
 </html>
