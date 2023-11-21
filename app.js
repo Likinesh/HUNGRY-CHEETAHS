@@ -306,6 +306,50 @@ app.post("/space-articles-next",async(req,res)=>{
   res.redirect("/space-articles");
 })
 
+let url1 = "https://api.spaceflightnewsapi.net/v4/blogs";
+app.get("/space-blogs",async(req,res)=>{
+  const response = await axios.request(url1);
+  const result =response.data;
+  res.render("space-blogs",{data:result});
+});
+
+app.post("/space-blogs-prev",async(req,res)=>{
+  const response = await axios.request(url1);
+  const result = response.data;
+  url1=result.previous;
+  res.redirect("/space-blogs");
+  
+});
+
+app.post("/space-blog-next",async(req,res)=>{
+  const response = await axios.request(url1);
+  const result = response.data;
+  url1= result.next;
+  res.redirect("/space-blogs");
+})
+
+let url2 = "https://api.spaceflightnewsapi.net/v4/reports";
+app.get("/space-reports",async(req,res)=>{
+  const response = await axios.request(url2);
+  const result =response.data;
+  res.render("space-reports",{data:result});
+});
+
+app.post("/space-reports-prev",async(req,res)=>{
+  const response = await axios.request(url2);
+  const result = response.data;
+  url1=result.previous;
+  res.redirect("/space-reports");
+  
+});
+
+app.post("/space-reports-next",async(req,res)=>{
+  const response = await axios.request(url2);
+  const result = response.data;
+  url1= result.next;
+  res.redirect("/space-reports");
+})
+
 app.post("/solar-system",(req,res)=>{
     planet_name=req.body.planet;
     res.redirect('/solar-system');

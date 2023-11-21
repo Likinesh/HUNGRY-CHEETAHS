@@ -96,5 +96,11 @@ color:white;
     margin-left: 40%;
     font-size: xx-large;
   }
-
+#prev{
+  margin-left: 5%;
+}
+#next{
+  margin-left: 93%;
+  
+}
 
