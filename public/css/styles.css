@@ -7,6 +7,7 @@
   body {
     height: 100vh;
     background: linear-gradient(184deg,#8754ff,#8E2DE2);
+    background-size: cover;
   }
   .start-screen,
   .score-container {
@@ -20,9 +21,12 @@
     justify-content: center;
   }
   button {
-    border: none;
+    border-style: hidden;
     outline: none;
     cursor: pointer;
+    color:black ;
+    margin-bottom: 40%;
+    margin-left: -10%;
   }
   #start-button,
   #restart {
