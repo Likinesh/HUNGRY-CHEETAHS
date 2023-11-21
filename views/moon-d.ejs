@@ -3,15 +3,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/moon.css">
 </head>
-<body>
+<body style="background-image: url('pictures/moon.webp');">
+    <div class="navbar">
+        <div class="links">
+            <a href="home" id="home">Home</a>
+                <a href="about" id="about">About</a>
+                <a href="services" id="service">Services</a>
+                <a href="contact" id=contact>Contact</a>
+        </div>
+       </div>
+       <div id="total">
     <div id="contain_moon" style="text-align:center;padding-top:7px;padding-bottom:7px;font-size:23px">
-    <div style="font-weight:bold">The moon today</div>
-    <div style="margin-top:-9px;margin-bottom:-19px;padding:39px;filter:drop-shadow(0 0 39px hsl(191,100%,29%))">
+        <div id="heading" >The moon today</div>
+        <div style="margin-top:-9px;margin-bottom:-19px;padding:39px;filter:drop-shadow(0 0 39px hsl(191,100%,29%))">
+        </div>
+        <div>.</div>
+        <div style="font-size:small">.</div>
     </div>
-    <div>.</div>
-    <div style="font-size:small">.</div>
-    </div>
+</div>
     <script>
     (function(){
         var d=new Date().getDate();
@@ -29,12 +40,5 @@
                 a.open("GET",url,true);
                 a.send()})()
     </script>
-
-
-
-
-
-
-
 </body>
 </html>
