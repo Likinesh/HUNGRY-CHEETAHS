@@ -284,6 +284,12 @@ app.get("/solar-system",async(req,res)=>{
   }
 });
 
+app.post("/solar-system",(req,res)=>{
+  planet_name=req.body.planet;
+  res.redirect('/solar-system');
+  
+})
+
 let url = "https://api.spaceflightnewsapi.net/v4/articles";
 app.get("/space-articles",async(req,res)=>{
   const response = await axios.request(url);
@@ -348,12 +354,6 @@ app.post("/space-reports-next",async(req,res)=>{
   const result = response.data;
   url1= result.next;
   res.redirect("/space-reports");
-})
-
-app.post("/solar-system",(req,res)=>{
-    planet_name=req.body.planet;
-    res.redirect('/solar-system');
-    
 })
 
 app.get('/moons',async(req,res)=>{

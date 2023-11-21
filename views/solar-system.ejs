@@ -3,26 +3,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/solar.css">
 </head>
-<body>
-    <h1>Planet Details:</h1>
-    <form action="/solar-system" method="post">
+<div class="navbar" style="border-radius: 0%;">
+    <div class="links">
+        <a href="home" id="home">Home</a>
+            <a href="about" id="about">About</a>
+            <a href="services" id="service">Services</a>
+            <a href="contact" id=contact>Contact</a>
+    </div>
+   </div>
+<body style="background-image:url(pictures/solar2.jpg); background-size:cover;">
+    
+    <h1 style="text-align:center; color: darkseagreen;">Planet Details:</h1>
+    <form action="/solar-system" method="post"style="text-align:center;">
         <input type="text" name="planet" id="" placeholder="Planet name">
-        <button type="submit">Send</button>
+        <button type="submit">Search</button>
     </form>
-    <% if (locals.solar!==null) { %>
-            <h1>Details :</h1>
-            <h3>Name of Planet: <%=solar[0].name%></h3>
-            <p>Mass :<%= solar[0].mass %>*1.898*10^27 kg</p>
-            <p>Radius :<%=radi%>kms</p>
-            <p>Timeperiod to revolve :<%=solar[0].period%>days</p>
-            <p>Temperature :<%=solar[0].temperature%>K</p>
+    <div class="details" style="text-align:center; color:darkkhaki;">
+    <%if (locals.solar!==null) { %>
+            <h1 style="color:darkcyan">Details :</h1>
+            <h2>Name of Planet:  <%=solar[0].name%></h2>
+            <h3 >Mass : &nbsp; <%= solar[0].mass %>*1.898*10^27 kg</h3>
+            <h3>Radius :<%=radi%>kms</h3>
+            <h3>Timeperiod to revolve :<%=solar[0].period%>days</h3>
+            <h3>Temperature :<%=solar[0].temperature%>K</h3>
     <% } %>
         <br>
 <% if (locals.data) { %>
-    <h1>In our Solar System:</h1>
+    <h1 style="color:darkorange">In our Solar System:</h1>
     <% for( let i = 0; i < data.knowncount.length; i++ ) { %>
-        <p>Number of <%= data.knowncount[i].id%> is <%= data.knowncount[i].knownCount %></p>
+        <h3>Number of <%= data.knowncount[i].id%> is <%= data.knowncount[i].knownCount %></h3>
     <% } }%>
+    </div>
 </body>
 </html>
