@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacex-Ships</title>
-    <link rel="stylesheet" href="css/spacex.css">
+    <link rel="stylesheet" href="css/spacex1.css">
 </head>
-<body> 
+<body style="background-image: url('pictures/blackspace.jpg!d');"></body>
      <div class="navbar">
     <div class="links">
         <a href="home" id="home">Home</a>
@@ -14,7 +14,7 @@
             <a href="contact" id=contact>Contact</a>
     </div>
    </div>
-    <h1>Ships in SpaceX</h1>
+    <h1 style="color: beige;">Ships in SpaceX</h1>
 
     <% for( let i = 0; i < data.length; i++ ) { %>
         <div id="border">
@@ -22,7 +22,7 @@
         <% if ( data[i].image !== null) { %>
             <img id="img" src="<%= data[i].image %>" height="300px" width="500px">
         <% } %>
-        <p>Built in: <%= data[i].year_built %></p>
+        <div id="summary"><p>Built in: <%= data[i].year_built %></p>
         <p>Type: <%= data[i].type %></p>
         <p>Home port: <%= data[i].home_port %></p>
         <p>Mass: <%= data[i].mass_kg %> kg</p>
@@ -30,7 +30,8 @@
         <% for( let j = 0; j < data[i].roles.length; j++ ) { %>
             <p> <%= data[i].roles[j] %> </p>
         
-        <% } %></div>
+        <% } %>
+    </div></div>
     <% } %>
 </body>
 </html>
