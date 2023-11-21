@@ -2,16 +2,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title> space-news</title>
+    <link rel="stylesheet" href="css/spacex.css">
 
 </head>
-<body>
-    <h1>Source websites are :</h1>
-    <ul>
+<body style="background-image: url('pictures/bluespace1.jpg');">
+    <div class="navbar">
+        <div class="links">
+            <a href="home" id="home">Home</a>
+                <a href="about" id="about">About</a>
+                <a href="services" id="service">Services</a>
+                <a href="contact" id=contact>Contact</a>
+        </div>
+       </div>
+    
+        <h1 style="color: azure;">Source websites are :</h1>
+    <div class="grid-container1">
+    
+    <ul style="color: aliceblue;">
     <% for(var i=0; i<data1.news_sites.length; i++) { %>
         <li> <%= data1.news_sites[i] %></li>
     <% } %>
     </ul>
-    
+    </div>
 </body>
 </html>
