@@ -3,9 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/mars1.css">
 </head>
-<body>
-    <h1>Mars Weather:</h1>
+<body style="background-image: url(pictures/marsimg.jpg);" >
+    <div class="navbar">
+        <div class="links">
+            <a href="home" id="home">Home</a>
+                <a href="about" id="about">About</a>
+                <a href="services" id="service">Services</a>
+                <a href="contact" id=contact>Contact</a>
+        </div>
+       </div>
+       <b><i>
+   <div id="heading"> <h1 >Mars Weather:</h1></div>
+    <div id="matter">
     <p>Terrestrial Date: <%= data.terrestrial_date %></p>
     <p>Temperature: </p>
     <ul>
@@ -15,6 +26,9 @@
     <p>Pressure: <%= data.pressure %></p>
     <p>Sunrise :<%= data.sunrise %></p>
     <p>Sunset :<%= data.sunset %></p>
+</div>
+</i>
+</b>
     
 </body>
 </html>
