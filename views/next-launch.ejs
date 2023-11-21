@@ -3,10 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/spacex.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="links" >
+            <a href="home" id="home">Home</a>
+            <a href="about" id="about">About</a>
+            <a href="services" id="service">Services</a>
+            <a href="contact" id=contact>Contact</a>
+        </div>
+    </div>
     <h1>Upcoming 5 SpaceCraft Launches are:</h1>
     <% for( let i = 0; i < data.result.length; i++ ) { %>
+        <div id="border">
+            <div style="margin-left: 2%;">
         <h3>Mission Name: <%= data.result[i].name %></h3>
         <p>Launching Date: <%= data.result[i].date_str %>,<%= data.result[i].est_date.year %></p>
         <p>Launching by: <%= data.result[i].provider.name %></p>
@@ -14,6 +25,7 @@
         <p>Launch Pad: <%= data.result[i].pad.name %></p>
         <p>Location: <%= data.result[i].pad.location.name %>,<%= data.result[i].pad.location.country %></p>
         <p>Description: <%= data.result[i].launch_description %></p>
+    </div></div>
     <% } %>
 </body>
 </html>
