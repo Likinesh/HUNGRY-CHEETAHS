@@ -79,12 +79,15 @@ color:white;
   }
   #title{
     font-size: x-large;
+    margin-left: 1%;
   }
   #event{
     font-size: x-large;
+    margin-left: 1%;
   }
 #details{
     font-size: x-large;
+    margin-left: 1%;
   }
   #img{
     margin-left: 30%;

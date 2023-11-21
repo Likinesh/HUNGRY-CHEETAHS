@@ -4,8 +4,6 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
-const authString = btoa(`588795a3-6316-4d77-b30e-e5310f5d2903:41243b5c12f6a06bf92d5848e84c84ae1ff84ce0c9320c14c3841467b0e8454ccb3076aedee6ff70d8fb6e8980d12ab86f53f07b7d0a2715ba1edc69757e42eb82ec3d339358f61b9ee60be87af00b2de635d170e60600118f8935223f2fc1157e6af9d6375a4a806f6554c741ea527f`);
-
 const app = express();
 const port = 3000;
 
