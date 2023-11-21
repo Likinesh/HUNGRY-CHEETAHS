@@ -3,9 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/spacex.css">
+    <link rel="stylesheet" href="css/spacex1.css">
 </head>
-<body>
+<body style="background-image: url('pictures/blackspace.jpg!d');"></body>
     <i>
         <div class="navbar">
          <div class="links">
@@ -15,16 +15,18 @@
                  <a href="contact" id=contact>Contact</a>
          </div>
         </div>
-    <h1>SpaceX Launchpads:</h1>
+    <h1 style="color: beige;">SpaceX Launchpads:</h1>
     <% for( let i = 0; i < data.length; i++ ) { %>
         <div id="border">
         <a id="main"> <%= data[i].name %></a> 
         <div id="img"><img src="<%= data[i].images.large %>" height="400px" width="500px"></div>
+        <div id="summary">
         <p>Full name: <%= data[i].full_name %></p>
         <p>Locations: <%= data[i].locality %>,<%= data[i].region %></p>
         <p>Status: <%= data[i].status %></p>
         <p>Number of Successful launches: <%= data[i].launch_successes %></p>
         <p>Details: <%= data[i].details %></p>
+    </div>
     </div>
     <% } %>
 </body>
