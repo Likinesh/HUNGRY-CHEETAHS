@@ -1,39 +1,19 @@
-.navbar{
-    width:100%;
-    height:30px;
-    max-width:1200px;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    justify-content: space-between;
-    margin-left: 10%;
-    background-color: black;
-    border-radius: 50%;
-  }
-  .navbar .links a{
-    font-size:1.5rem;
-    margin-left: 50%;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: medium;
-  }
-  .navbar .links{
-    display:flex;
-    gap: 3rem;
-    color: white;
-    text-decoration: none;
-  }
-  body{
-    background-size: cover;
-  }
-  #heading{
-    color: rgb(174, 63, 63);
-    font-size: xx-large;
-  }
-  #matter{
-    margin-left: 6%;
-    font-size: xx-large;
-  }
+
+body{
+  background-size: cover;
+}
+#heading{
+  color: rgb(174, 63, 63);
+  font-size: xx-large;
+}
+#matter{
+  margin-left: 6%;
+  font-size: xx-large;
+}.nav-link{
+  color: white;
+}.navbar-brand{
+  color: white;
+}
+
+
   
- 
-    

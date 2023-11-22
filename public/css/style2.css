@@ -86,4 +86,8 @@ body{
     position:center;
     border-radius: 20px;
     display: center;
+}.nav-link{
+    color: white;
+}.navbar-brand{
+    color: white;
 }

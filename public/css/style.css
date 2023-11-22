@@ -9,6 +9,10 @@
     -webkit-text-stroke: 0px #fff;
     color:transparent;
     
+}.nav-link{
+    color: white;
+}.navbar-brand{
+    color: white;
 }
 .container{
     width: 100%;
@@ -78,32 +82,7 @@ a{
     position:relative;
     padding:0 2rem;
 }
-.navbar{
-    width:100%;
-    height:60px;
-    max-width:1200px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    justify-content: space-between;
-}
-.navbar .logo a{
-    font-size:1.5rem;
-    font-weight:bold;
-    float: left;
-}
-.navbar .links{
-    display:flex;
-    gap: 4rem;
-}
-.navbar .toggle_btn{
-    color:white;
-    font-size:1.5rem;
-    cursor:pointer;
-    display:none;
 
-}
 .action_btn{
     background-color:blueviolet;
     color:#fff;
@@ -185,3 +164,9 @@ video {
     background-color: black;
     color: white;
   }
+  @media (min-width: 992px){
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
+}

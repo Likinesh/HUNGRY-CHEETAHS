@@ -49,7 +49,8 @@ video {
     top: 0;
     left: 0;
   }
-  #mode{
-    background-color: black;
+  .nav-link{
     color: white;
-  }
+}.navbar-brand{
+    color: white;
+}
