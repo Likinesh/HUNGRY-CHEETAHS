@@ -25,14 +25,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-button {
-  border-style: hidden;
-  outline: none;
-  cursor: pointer;
-  color:black ;
-  margin-bottom: 40%;
-  margin-left: -10%;
-}
+
 #start-button,
 #restart {
   font-size: 1.3em;

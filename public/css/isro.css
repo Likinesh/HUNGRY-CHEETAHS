@@ -13,6 +13,11 @@ h1,h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
+ body{
+    background-position: center;
+    background-size: cover;
+    
+} 
 h2>a{
     
     text-decoration: none;
@@ -49,7 +54,7 @@ video {
     top: 0;
     left: 0;
   }
-  .nav-link{
+.nav-link{
     color: white;
 }.navbar-brand{
     color: white;
