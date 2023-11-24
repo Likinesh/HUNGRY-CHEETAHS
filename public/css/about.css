@@ -1,14 +1,22 @@
 #hero{
     position:relative;
 }
+#go{
+    font-size: larger;
+    text-align: center;
+}
+.go{
+    margin-left: 30vw;
+}
 .nav-link{
     color: white;
 }.navbar-brand{
     color: white;
 }
 .home-section-bg{
-    height: 100vh;
+    height: 190vh;
     background-size: cover;
+    color: whitesmoke;
 }
 .about-us-section-bg{
     background-color: white;
@@ -30,9 +38,9 @@ margin-top:500px;
 .h5{
     color:wheat;
 }
-.content{
+/* .content{
     text-align:center;
-}
+} */
 .content h1{
     font: size 95px;
     color: #fff;
