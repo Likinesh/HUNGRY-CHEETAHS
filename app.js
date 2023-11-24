@@ -1,6 +1,5 @@
 const express = require('express');
 const axios = require('axios');
-const http = require('http');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
@@ -365,11 +364,19 @@ app.get("/about",(req,res)=>{
 })
 
 app.get("/contact",(req,res)=>{
-  res.render("contact-us")
+  res.render("contact-us");
+})
+
+app.get("/Links",(req,res)=>{
+  res.render("common-links.ejs");
 })
 
 app.post("/Links",(req,res)=>{
-  res.render("common-links.ejs")
+  res.redirect("/Links");
+})
+
+app.get("/celestial",(req,res)=>{
+  res.render("celestial");
 })
 
 app.post('/sendmail',async(req,res)=>{
