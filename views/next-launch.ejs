@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/spacex.css">
 </head>
-<body>
+<body style="background-image: url('pictures/blackspace.jpg');">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="justify-content: space-around;">
     <div class="container" >
       <a class="navbar-brand" href="/">Space Explorar</a>
@@ -52,10 +52,11 @@
       <br>
       <br>
       <br>
-    <h1>Upcoming 5 SpaceCraft Launches are:</h1>
+    <h1 id="heading">Upcoming 5 SpaceCraft Launches are:</h1>
     <% for( let i = 0; i < data.result.length; i++ ) { %>
-        <div id="border">
-            <div style="margin-left: 2%;">
+        <div>
+          <div id="border">  
+            <div id="summary">
         <h3>Mission Name: <%= data.result[i].name %></h3>
         <p>Launching Date: <%= data.result[i].date_str %>,<%= data.result[i].est_date.year %></p>
         <p>Launching by: <%= data.result[i].provider.name %></p>
@@ -63,7 +64,7 @@
         <p>Launch Pad: <%= data.result[i].pad.name %></p>
         <p>Location: <%= data.result[i].pad.location.name %>,<%= data.result[i].pad.location.country %></p>
         <p>Description: <%= data.result[i].launch_description %></p>
-    </div></div>
+    </div></div></div>
     <% } %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
