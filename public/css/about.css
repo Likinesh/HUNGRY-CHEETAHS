@@ -6,7 +6,7 @@
     text-align: center;
 }
 .go{
-    margin-left: 30vw;
+    margin-left: 35vw;
 }
 .nav-link{
     color: white;
@@ -59,6 +59,23 @@ margin-top:500px;
 }
 .content a:hover{
     background-color:#fff;
-    color:#000;
+    color:#000;    
+}
+#body{
+    background-size: cover;
+    background-position: center;
+}
+#bodyh2{
+    text-align: center;
+}
+#click ul li h1 a{
+    color: azure;
+    margin-left: 2%;
+    text-decoration: none;
+}
+
+#know{
+    border: 5px solid whitesmoke;
+    border-radius: 25%;
     
 }
