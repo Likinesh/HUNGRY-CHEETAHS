@@ -55,3 +55,8 @@ body{
   margin-left: 93%;
   
 }
+#click  h2 a:hover{
+  background: -webkit-linear-gradient(#eee, #b32525);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
