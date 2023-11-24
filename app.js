@@ -368,6 +368,10 @@ app.get("/contact",(req,res)=>{
   res.render("contact-us")
 })
 
+app.post("/Links",(req,res)=>{
+  res.render("common-links.ejs")
+})
+
 app.post('/sendmail',async(req,res)=>{
   let name =req.body.name;
   let mail =req.body.mail;

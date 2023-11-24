@@ -89,55 +89,6 @@
   form the building blocks of the universe. From the graceful spiral arms of the Milky Way to the distant quasars, each celestial
    entity tells a unique story of cosmic evolution.</p>
   
-  <!-- <h3> Dark Matter and Dark Energy</h3>
-  
-  <p>The universe holds enigmas in the form of dark matter and dark energy, mysterious substances that make up the majority of the 
-  cosmos. Their elusive nature challenges our understanding of the fundamental forces that govern the universe.</p>
-   -->
-  <!-- <h3> Black Holes and Neutron Stars</h3>
-  
-  <p>Black holes, cosmic vacuums with gravitational forces so strong that nothing can escape, are celestial phenomena that continue 
-  to intrigue scientists. Neutron stars, remnants of massive stellar explosions, showcase the extreme conditions that exist in the cosmos.</p>
-   -->
-  <!-- <h3> The Search for Extraterrestrial Life</h3>
-  
-  <p>The possibility of life beyond Earth fuels the search for extraterrestrial intelligence. Scientists explore distant exoplanets, 
-  icy moons, and the subsurface oceans of celestial bodies, seeking clues that may indicate the presence of life beyond our home planet.</p>
-   -->
-  <!-- <h3> Space Exploration and Technology</h3>
-  
-  <p>Humanity's quest to explore space has led to technological innovations that have far-reaching implications. Satellites orbiting 
-  the Earth provide crucial data for weather forecasting, communication, and navigation, while space probes venture into the depths 
-  of the cosmos, expanding our understanding of the universe.</p>
-   -->
-  <!-- <h3> Challenges of Space Travel</h3>
-  
-  <p>Space travel comes with its share of challenges, including the harsh conditions of microgravity, radiation exposure, and the 
-  psychological impact of long-duration missions. Overcoming these hurdles is essential for the success of future manned missions 
-  to Mars and beyond.</p> -->
-  
-  <!-- <h3> International Collaboration in Space</h3>
-  
- <p> Space exploration has transcended national borders, with collaborations such as the International Space Station (ISS) fostering 
-  cooperation among countries. Joint missions and shared resources contribute to the collective knowledge of humanity's place in 
-  the cosmos.</p> -->
-  
-  <!-- <h3> Space Debris and Sustainability</h3>
-  
-  <p>The growing presence of space debris poses a threat to satellites and spacecraft in orbit. Addressing the issue of space debris 
-  requires international cooperation and sustainable practices to ensure the long-term viability of space exploration.</p>
-   -->
-  <!-- <h3> The Future of Space Exploration</h3>
-  
-  <p>As technology advances, the future of space exploration holds exciting possibilities. From the prospect of human settlements on 
-  Mars to the discovery of potentially habitable exoplanets, the next frontier promises to be a continuation of humanity's quest for 
-  knowledge and adventure.</p> -->
-  
-  <!-- <h3>The Cosmic Perspective</h3>
-  
-  <p>In contemplating the vastness of space, we gain a profound perspective on our place in the universe. The mysteries of outer space 
-  not only inspire scientific inquiry but also evoke a sense of wonder and humility, reminding us of the boundless possibilities that 
-  await exploration in the cosmic expanse.</p> -->
   </div>
   <h1 style="text-align:center; color: darkseagreen;">Planet Details:</h1>
     <form action="/solar-system" method="post"style="text-align:center;">
@@ -148,7 +99,7 @@
     <%if (locals.solar!==null) { %>
             <h1 style="color:darkcyan">Details :</h1>
             <h2>Name of Planet:  <%=solar[0].name%></h2>
-            <h3 >Mass : &nbsp; <%= solar[0].mass %><h3>1.898<h3>10^27 kg</h3>
+            <h3 >Mass :<%= solar[0].mass %>*1.898*10<sup>27</sup> kg</h3>
             <h3>Radius :<%=radi%>kms</h3>
             <h3>Timeperiod to revolve :<%=solar[0].period%>days</h3>
             <h3>Temperature :<%=solar[0].temperature%>K</h3>

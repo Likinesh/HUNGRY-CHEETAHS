@@ -1,9 +1,12 @@
 body{
   background-position: center;
-  background-size: cover;
 }
 #clicks a{
  justify-content: space-between;
+}
+#body{
+  background-size: cover;
+  background-position: center;
 }
 
 #border{
