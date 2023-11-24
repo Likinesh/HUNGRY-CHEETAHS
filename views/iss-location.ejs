@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="css/public.css">
     
 </head>
-<body>
-    
-    <video autoplay loop muted speed="0.5" plays-inline class="background-clip">
-        <source src="video/bckgd1.mp4" type="video/mp4">
-    </video>
+<body style="background-image:url( pictures/space2.jpg);">
  <i>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="justify-content: space-around;">
     <div class="container" >
@@ -62,9 +58,9 @@
    <br>
 
    <div id="total">
-    <div><h1>ISS Information</h1></div>
+    <div><h1><b>ISS Information</b></h1></div>
     <div id="location">
-    <ul>
+    <!-- <ul> -->
     <li>Latitude: <%= place.results[0].annotations.DMS.lat %></li>
     <li>Longitude: <%= place.results[0].annotations.DMS.lng %></li>
     <li>Current Velocity: <%=data.velocity%>Kmph</li>
@@ -75,12 +71,12 @@
 <br>
 <br>
 <div>
-   <b> <h1 >Members in ISS are</hi></b>
+   <b> <h1 style="color: black;" >Members in ISS are</hi></b>
 </div>
     <br>
 
     <div id="members">
-    <ol>
+    <!-- <ol> -->
     <% for (var i=0;i<members.number;i++){  %>
            <i> <li> <%= members.people[i].name %>  </li> </i>
     <% }  %>

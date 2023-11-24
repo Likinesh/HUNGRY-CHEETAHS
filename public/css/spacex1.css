@@ -1,20 +1,17 @@
-#summary{
-  margin-left: 2%;
+body{
+  background-color: black;
+}
+#heading{
+  color: azure;
+  text-align: center;
 }
 #border{
-  border: 2px solid rgb(154, 145, 128);
-  color: azure;
-  font-size: x-large;
-}.nav-link{
+  color: whitesmoke;
+}
+.nav-link{
 color: white;
 }.navbar-brand{
 color: white;
-}
-#main{
-  font-size: xx-large;
-  margin-left: 45%;
-  color: bisque;
-
 }
 .grid-container {
   columns: 3 400px;
@@ -29,9 +26,9 @@ color: white;
   margin: 0 1.5rem 1.5rem 0;
   display: inline-block;
   width: 100%;
-  border: solid 2px black;
+  border: solid 2px rgb(252, 246, 246);
   padding: 5px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px rgba(243, 239, 239, 0.5);
   border-radius: 5px;
   transition: all 0.25s ease-in-out;
 }
@@ -57,35 +54,5 @@ color: white;
   text-align: center;
   font-style: italic;
 }
-#heading{
-  margin-left:40%;
-  color: aliceblue;
-}
-#title{
-  font-size: x-large;
-  margin-left: 1%;
-}
-#event{
-  font-size: x-large;
-  margin-left: 1%;
-}
-#details{
-  font-size: x-large;
-  margin-left: 1%;
-}
- #border #img{
-align-items: center;
-}
-#shipname{
-  margin-left: 40%;
-  font-size: xx-large;
-  color: bisque;
-}
-#prev{
-margin-left: 5%;
-}
-#next{
-margin-left: 93%;
 
-}
 

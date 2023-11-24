@@ -1,6 +1,7 @@
 
 body{
   background-size: cover;
+  background-position: center;
 }
 #heading{
   font-weight:bold;
@@ -8,8 +9,10 @@ body{
   margin-top: 12%;
 }
 #total{
-  margin-left: 22%;
-}.nav-link{
+  margin-left: -25vw;
+  margin-top:-10vh ;
+}
+.nav-link{
   color: white;
 }.navbar-brand{
   color: white;
