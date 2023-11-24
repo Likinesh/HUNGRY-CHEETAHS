@@ -5,6 +5,9 @@
     font-family:'Poppins';
     color: #fff;
 }
+.content h1{
+    color:rgb(208, 112, 34)
+}
 .logo :hover{
     -webkit-text-stroke: 0px #fff;
     color:transparent;
